@@ -1,24 +1,24 @@
-Aug 16, 2025 1:11:59 PM reposense.system.LogsManager addFileHandler
+Aug 16, 2025 2:35:17 PM reposense.system.LogsManager addFileHandler
 INFO: Log temp folder has been successfully created
-Aug 16, 2025 1:11:59 PM reposense.parser.ArgsParser parse
+Aug 16, 2025 2:35:18 PM reposense.parser.ArgsParser parse
 INFO: Config path not provided, using the config folder as default.
-Aug 16, 2025 1:11:59 PM reposense.parser.ReportConfigYamlParser parse
+Aug 16, 2025 2:35:18 PM reposense.parser.ReportConfigYamlParser parse
 INFO: Parsing report-config.yaml file...
-Aug 16, 2025 1:11:59 PM reposense.parser.ArgsParser addReportConfigToBuilder
+Aug 16, 2025 2:35:18 PM reposense.parser.ArgsParser addReportConfigToBuilder
 WARNING: Error parsing report-config.yaml: /home/runner/work/tablero-de-participacion/tablero-de-participacion/config/report-config.yaml (No such file or directory)
 /home/runner/work/tablero-de-participacion/tablero-de-participacion/config/report-config.yaml Ignoring the report config provided.
-Aug 16, 2025 1:11:59 PM reposense.parser.CsvParser validateHeader
+Aug 16, 2025 2:35:18 PM reposense.parser.CsvParser validateHeader
 INFO: Parsed header of CSV file, repo-config.csv, and recognized columns: Ignore Standalone Config,  Repository's Location,  Skip Ignored File Analysis,  Branch,  Shallow Cloning,  File formats,  Ignore Glob List,  Ignore Authors List,  Find Previous Authors,  File Size Limit,  Ignore File Size Limit,  Ignore Commits List
-Aug 16, 2025 1:11:59 PM reposense.parser.CsvParser validateHeader
+Aug 16, 2025 2:35:18 PM reposense.parser.CsvParser validateHeader
 INFO: Parsed header of CSV file, author-config.csv, and recognized columns: Author's Emails,  Repository's Location,  Branch,  Author's Git Host ID,  Author's Display Name,  Ignore Glob List,  Author's Git Author Name
-Aug 16, 2025 1:11:59 PM reposense.model.ConfigRunConfiguration getRepoConfigurations
+Aug 16, 2025 2:35:18 PM reposense.model.ConfigRunConfiguration getRepoConfigurations
 WARNING: No valid configurations in the author-config.csv.
 reposense.parser.exceptions.InvalidCsvException: No valid configurations in the author-config.csv.
 	at reposense.parser.CsvParser.parse(CsvParser.java:124)
 	at reposense.model.ConfigRunConfiguration.getRepoConfigurations(ConfigRunConfiguration.java:52)
 	at reposense.RepoSense.main(RepoSense.java:59)
 
-Aug 16, 2025 1:11:59 PM reposense.git.GitConfig getGlobalGitLfsConfig
+Aug 16, 2025 2:35:18 PM reposense.git.GitConfig getGlobalGitLfsConfig
 WARNING: Could not get global git lfs config
 java.lang.RuntimeException: reposense.system.CommandRunnerProcessException: Error returned from command git config --global --list on path . :
 fatal: unable to read config file '/home/runner/.gitconfig': No such file or directory
@@ -34,83 +34,23 @@ fatal: unable to read config file '/home/runner/.gitconfig': No such file or dir
 	at reposense.system.CommandRunner.runCommand(CommandRunner.java:21)
 	... 3 more
 
-Aug 16, 2025 1:11:59 PM reposense.report.RepoCloner spawnCloneProcess
+Aug 16, 2025 2:35:18 PM reposense.report.RepoCloner spawnCloneProcess
 INFO: Cloning in parallel from git@github.com:CA0307-II-2025/grupo-2.git...
-Aug 16, 2025 1:11:59 PM reposense.report.RepoCloner spawnCloneProcess
-INFO: Cloning in parallel from git@github.com:CA0307-II-2025/grupo-3.git...
-Aug 16, 2025 1:11:59 PM reposense.report.RepoCloner spawnCloneProcess
+Aug 16, 2025 2:35:18 PM reposense.report.RepoCloner spawnCloneProcess
 INFO: Cloning in parallel from git@github.com:CA0307-II-2025/grupo-1.git...
-Aug 16, 2025 1:11:59 PM reposense.report.RepoCloner spawnCloneProcess
+Aug 16, 2025 2:35:18 PM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from git@github.com:CA0307-II-2025/grupo-3.git...
+Aug 16, 2025 2:35:18 PM reposense.report.RepoCloner spawnCloneProcess
 INFO: Cloning in parallel from git@github.com:CA0307-II-2025/grupo-4.git...
-Aug 16, 2025 1:11:59 PM reposense.report.RepoCloner waitForCloneProcess
+Aug 16, 2025 2:35:18 PM reposense.report.RepoCloner waitForCloneProcess
 INFO: Waiting for cloning of git@github.com:CA0307-II-2025/grupo-3.git to complete...
-Aug 16, 2025 1:11:59 PM reposense.report.RepoCloner waitForCloneProcess
-INFO: Waiting for cloning of git@github.com:CA0307-II-2025/grupo-4.git to complete...
-Aug 16, 2025 1:11:59 PM reposense.report.RepoCloner waitForCloneProcess
+Aug 16, 2025 2:35:18 PM reposense.report.RepoCloner waitForCloneProcess
 INFO: Waiting for cloning of git@github.com:CA0307-II-2025/grupo-2.git to complete...
-Aug 16, 2025 1:11:59 PM reposense.report.RepoCloner waitForCloneProcess
+Aug 16, 2025 2:35:18 PM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of git@github.com:CA0307-II-2025/grupo-4.git to complete...
+Aug 16, 2025 2:35:18 PM reposense.report.RepoCloner waitForCloneProcess
 INFO: Waiting for cloning of git@github.com:CA0307-II-2025/grupo-1.git to complete...
-Aug 16, 2025 1:12:00 PM reposense.report.RepoCloner waitForCloneProcess
-WARNING: Exception met while trying to clone the repo "CA0307-II-2025/grupo-1[main]", will skip this repo.
-reposense.system.CommandRunnerProcessException: Error returned from command git clone --bare 'git@github.com:CA0307-II-2025/grupo-1.git' 'repos/CA0307-II-2025_grupo-1/grupo-1_bare' on path . :
-Cloning into bare repository 'repos/CA0307-II-2025_grupo-1/grupo-1_bare'...
-git@github.com: Permission denied (publickey).
-fatal: Could not read from remote repository.
-
-Please make sure you have the correct access rights
-and the repository exists.
-
-	at reposense.system.CommandRunnerProcess.waitForProcess(CommandRunnerProcess.java:46)
-	at reposense.report.RepoCloner.waitForCloneProcess(RepoCloner.java:323)
-	at reposense.report.RepoCloner.getClonedRepoLocation(RepoCloner.java:123)
-	at reposense.report.ReportGenerator.cloneRepo(ReportGenerator.java:348)
-	at reposense.report.ReportGenerator.lambda$cloneAndAnalyzeRepos$0(ReportGenerator.java:279)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1700)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:829)
-
-Aug 16, 2025 1:12:00 PM reposense.report.RepoCloner waitForCloneProcess
-WARNING: Exception met while trying to clone the repo "CA0307-II-2025/grupo-2[main]", will skip this repo.
-reposense.system.CommandRunnerProcessException: Error returned from command git clone --bare 'git@github.com:CA0307-II-2025/grupo-2.git' 'repos/CA0307-II-2025_grupo-2/grupo-2_bare' on path . :
-Cloning into bare repository 'repos/CA0307-II-2025_grupo-2/grupo-2_bare'...
-git@github.com: Permission denied (publickey).
-fatal: Could not read from remote repository.
-
-Please make sure you have the correct access rights
-and the repository exists.
-
-	at reposense.system.CommandRunnerProcess.waitForProcess(CommandRunnerProcess.java:46)
-	at reposense.report.RepoCloner.waitForCloneProcess(RepoCloner.java:323)
-	at reposense.report.RepoCloner.getClonedRepoLocation(RepoCloner.java:123)
-	at reposense.report.ReportGenerator.cloneRepo(ReportGenerator.java:348)
-	at reposense.report.ReportGenerator.lambda$cloneAndAnalyzeRepos$0(ReportGenerator.java:279)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1700)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:829)
-
-Aug 16, 2025 1:12:00 PM reposense.report.RepoCloner waitForCloneProcess
-WARNING: Exception met while trying to clone the repo "CA0307-II-2025/grupo-4[main]", will skip this repo.
-reposense.system.CommandRunnerProcessException: Error returned from command git clone --bare 'git@github.com:CA0307-II-2025/grupo-4.git' 'repos/CA0307-II-2025_grupo-4/grupo-4_bare' on path . :
-Cloning into bare repository 'repos/CA0307-II-2025_grupo-4/grupo-4_bare'...
-git@github.com: Permission denied (publickey).
-fatal: Could not read from remote repository.
-
-Please make sure you have the correct access rights
-and the repository exists.
-
-	at reposense.system.CommandRunnerProcess.waitForProcess(CommandRunnerProcess.java:46)
-	at reposense.report.RepoCloner.waitForCloneProcess(RepoCloner.java:323)
-	at reposense.report.RepoCloner.getClonedRepoLocation(RepoCloner.java:123)
-	at reposense.report.ReportGenerator.cloneRepo(ReportGenerator.java:348)
-	at reposense.report.ReportGenerator.lambda$cloneAndAnalyzeRepos$0(ReportGenerator.java:279)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1700)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:829)
-
-Aug 16, 2025 1:12:00 PM reposense.report.RepoCloner waitForCloneProcess
+Aug 16, 2025 2:35:18 PM reposense.report.RepoCloner waitForCloneProcess
 WARNING: Exception met while trying to clone the repo "CA0307-II-2025/grupo-3[main]", will skip this repo.
 reposense.system.CommandRunnerProcessException: Error returned from command git clone --bare 'git@github.com:CA0307-II-2025/grupo-3.git' 'repos/CA0307-II-2025_grupo-3/grupo-3_bare' on path . :
 Cloning into bare repository 'repos/CA0307-II-2025_grupo-3/grupo-3_bare'...
@@ -130,23 +70,83 @@ and the repository exists.
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
 
-Aug 16, 2025 1:12:00 PM reposense.report.RepoCloner spawnCloneProcess
+Aug 16, 2025 2:35:18 PM reposense.report.RepoCloner waitForCloneProcess
+WARNING: Exception met while trying to clone the repo "CA0307-II-2025/grupo-1[main]", will skip this repo.
+reposense.system.CommandRunnerProcessException: Error returned from command git clone --bare 'git@github.com:CA0307-II-2025/grupo-1.git' 'repos/CA0307-II-2025_grupo-1/grupo-1_bare' on path . :
+Cloning into bare repository 'repos/CA0307-II-2025_grupo-1/grupo-1_bare'...
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+	at reposense.system.CommandRunnerProcess.waitForProcess(CommandRunnerProcess.java:46)
+	at reposense.report.RepoCloner.waitForCloneProcess(RepoCloner.java:323)
+	at reposense.report.RepoCloner.getClonedRepoLocation(RepoCloner.java:123)
+	at reposense.report.ReportGenerator.cloneRepo(ReportGenerator.java:348)
+	at reposense.report.ReportGenerator.lambda$cloneAndAnalyzeRepos$0(ReportGenerator.java:279)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1700)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+Aug 16, 2025 2:35:18 PM reposense.report.RepoCloner spawnCloneProcess
 INFO: Cloning in parallel from https://github.com/reposense/RepoSense.git...
-Aug 16, 2025 1:12:00 PM reposense.report.RepoCloner waitForCloneProcess
+Aug 16, 2025 2:35:18 PM reposense.report.RepoCloner waitForCloneProcess
 INFO: Waiting for cloning of https://github.com/reposense/RepoSense.git to complete...
-Aug 16, 2025 1:12:05 PM reposense.report.RepoCloner waitForCloneProcess
+Aug 16, 2025 2:35:18 PM reposense.report.RepoCloner waitForCloneProcess
+WARNING: Exception met while trying to clone the repo "CA0307-II-2025/grupo-4[main]", will skip this repo.
+reposense.system.CommandRunnerProcessException: Error returned from command git clone --bare 'git@github.com:CA0307-II-2025/grupo-4.git' 'repos/CA0307-II-2025_grupo-4/grupo-4_bare' on path . :
+Cloning into bare repository 'repos/CA0307-II-2025_grupo-4/grupo-4_bare'...
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+	at reposense.system.CommandRunnerProcess.waitForProcess(CommandRunnerProcess.java:46)
+	at reposense.report.RepoCloner.waitForCloneProcess(RepoCloner.java:323)
+	at reposense.report.RepoCloner.getClonedRepoLocation(RepoCloner.java:123)
+	at reposense.report.ReportGenerator.cloneRepo(ReportGenerator.java:348)
+	at reposense.report.ReportGenerator.lambda$cloneAndAnalyzeRepos$0(ReportGenerator.java:279)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1700)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+Aug 16, 2025 2:35:18 PM reposense.report.RepoCloner waitForCloneProcess
+WARNING: Exception met while trying to clone the repo "CA0307-II-2025/grupo-2[main]", will skip this repo.
+reposense.system.CommandRunnerProcessException: Error returned from command git clone --bare 'git@github.com:CA0307-II-2025/grupo-2.git' 'repos/CA0307-II-2025_grupo-2/grupo-2_bare' on path . :
+Cloning into bare repository 'repos/CA0307-II-2025_grupo-2/grupo-2_bare'...
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+	at reposense.system.CommandRunnerProcess.waitForProcess(CommandRunnerProcess.java:46)
+	at reposense.report.RepoCloner.waitForCloneProcess(RepoCloner.java:323)
+	at reposense.report.RepoCloner.getClonedRepoLocation(RepoCloner.java:123)
+	at reposense.report.ReportGenerator.cloneRepo(ReportGenerator.java:348)
+	at reposense.report.ReportGenerator.lambda$cloneAndAnalyzeRepos$0(ReportGenerator.java:279)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1700)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+Aug 16, 2025 2:35:23 PM reposense.report.RepoCloner waitForCloneProcess
 INFO: Cloning of https://github.com/reposense/RepoSense.git completed!
-Aug 16, 2025 1:12:05 PM reposense.report.ReportGenerator analyzeRepos
+Aug 16, 2025 2:35:23 PM reposense.report.ReportGenerator analyzeRepos
 INFO: [1/5] Analyzing https://github.com/reposense/RepoSense.git (master)...
-Aug 16, 2025 1:12:05 PM reposense.authorship.FileInfoExtractor extractTextFileInfos
+Aug 16, 2025 2:35:24 PM reposense.authorship.FileInfoExtractor extractTextFileInfos
 INFO: Extracting relevant file info from https://github.com/reposense/RepoSense.git (master)...
-Aug 16, 2025 1:12:06 PM reposense.commits.CommitInfoExtractor extractCommitInfos
+Aug 16, 2025 2:35:24 PM reposense.commits.CommitInfoExtractor extractCommitInfos
 INFO: Extracting commits info for https://github.com/reposense/RepoSense.git (master)...
-Aug 16, 2025 1:12:06 PM reposense.commits.CommitInfoAnalyzer analyzeCommits
+Aug 16, 2025 2:35:25 PM reposense.commits.CommitInfoAnalyzer analyzeCommits
 INFO: Analyzing commits info for https://github.com/reposense/RepoSense.git (master)...
-Aug 16, 2025 1:12:06 PM reposense.report.ReportGenerator analyzeRepo
+Aug 16, 2025 2:35:25 PM reposense.report.ReportGenerator analyzeRepo
 INFO: Analysis of https://github.com/reposense/RepoSense.git (master) completed!
-Aug 16, 2025 1:12:06 PM reposense.report.ReportGenerator generateReposReport
+Aug 16, 2025 2:35:25 PM reposense.report.ReportGenerator generateReposReport
 INFO: The report is generated at /home/runner/work/tablero-de-participacion/tablero-de-participacion/reposense-report
-Aug 16, 2025 1:12:06 PM reposense.RepoSense main
-INFO: Elapsed processing time: 6.87 second(s)
+Aug 16, 2025 2:35:25 PM reposense.RepoSense main
+INFO: Elapsed processing time: 7.15 second(s)
