@@ -16,4 +16,4 @@
 ## Examples of other valid options; For more, please view the user guide
 ### java -jar RepoSense.jar --repos https://github.com/reposense/RepoSense.git
 
-java -jar RepoSense.jar --since 11/8/2025 --until 29/11/2025 --analyze-authorship --find-previous-authors --ignore-filesize-limit --last-modified-date --timezone UTC+06
+java -jar RepoSense.jar --since 11/8/2025 --until 29/11/2025 --analyze-authorship --find-previous-authors --ignore-filesize-limit --timezone UTC+06
