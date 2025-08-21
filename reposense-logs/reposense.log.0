@@ -1,26 +1,26 @@
-Aug 21, 2025 11:02:35 AM reposense.system.LogsManager addFileHandler
+Aug 21, 2025 11:03:41 AM reposense.system.LogsManager addFileHandler
 INFO: Log temp folder has been successfully created
-Aug 21, 2025 11:02:35 AM reposense.parser.ArgsParser parse
+Aug 21, 2025 11:03:41 AM reposense.parser.ArgsParser parse
 INFO: Config path not provided, using the config folder as default.
-Aug 21, 2025 11:02:35 AM reposense.parser.ReportConfigYamlParser parse
+Aug 21, 2025 11:03:41 AM reposense.parser.ReportConfigYamlParser parse
 INFO: Parsing report-config.yaml file...
-Aug 21, 2025 11:02:35 AM reposense.parser.ArgsParser addReportConfigToBuilder
+Aug 21, 2025 11:03:41 AM reposense.parser.ArgsParser addReportConfigToBuilder
 WARNING: Error parsing report-config.yaml: /home/runner/work/tablero-de-participacion/tablero-de-participacion/config/report-config.yaml (No such file or directory)
 /home/runner/work/tablero-de-participacion/tablero-de-participacion/config/report-config.yaml Ignoring the report config provided.
-Aug 21, 2025 11:02:35 AM reposense.parser.CsvParser validateHeader
+Aug 21, 2025 11:03:41 AM reposense.parser.CsvParser validateHeader
 INFO: Parsed header of CSV file, repo-config.csv, and recognized columns: Ignore Standalone Config,  Repository's Location,  Skip Ignored File Analysis,  Branch,  Shallow Cloning,  File formats,  Ignore Glob List,  Ignore Authors List,  Find Previous Authors,  File Size Limit,  Ignore File Size Limit,  Ignore Commits List
-Aug 21, 2025 11:02:35 AM reposense.parser.CsvParser isLineMalformed
+Aug 21, 2025 11:03:41 AM reposense.parser.CsvParser isLineMalformed
 WARNING: Line 6 in CSV file, repo-config.csv, is malformed.
 Content: [EMPTY LINE]
-Aug 21, 2025 11:02:35 AM reposense.parser.CsvParser isLineMalformed
+Aug 21, 2025 11:03:41 AM reposense.parser.CsvParser isLineMalformed
 WARNING: Line 7 in CSV file, repo-config.csv, is malformed.
 Content: [EMPTY LINE]
-Aug 21, 2025 11:02:35 AM reposense.parser.CsvParser isLineMalformed
+Aug 21, 2025 11:03:41 AM reposense.parser.CsvParser isLineMalformed
 WARNING: Line 8 in CSV file, repo-config.csv, is malformed.
 Content: [EMPTY LINE]
-Aug 21, 2025 11:02:35 AM reposense.parser.CsvParser validateHeader
+Aug 21, 2025 11:03:41 AM reposense.parser.CsvParser validateHeader
 INFO: Parsed header of CSV file, author-config.csv, and recognized columns: Author's Emails,  Repository's Location,  Branch,  Author's Git Host ID,  Author's Display Name,  Ignore Glob List,  Author's Git Author Name
-Aug 21, 2025 11:02:35 AM reposense.git.GitConfig getGlobalGitLfsConfig
+Aug 21, 2025 11:03:41 AM reposense.git.GitConfig getGlobalGitLfsConfig
 WARNING: Could not get global git lfs config
 java.lang.RuntimeException: reposense.system.CommandRunnerProcessException: Error returned from command git config --global --list on path . :
 fatal: unable to read config file '/home/runner/.gitconfig': No such file or directory
@@ -36,79 +36,79 @@ fatal: unable to read config file '/home/runner/.gitconfig': No such file or dir
 	at reposense.system.CommandRunner.runCommand(CommandRunner.java:21)
 	... 3 more
 
-Aug 21, 2025 11:02:35 AM reposense.report.RepoCloner spawnCloneProcess
-INFO: Cloning in parallel from https://github.com/CA0307-II-2025/grupo-1.git...
-Aug 21, 2025 11:02:35 AM reposense.report.RepoCloner spawnCloneProcess
-INFO: Cloning in parallel from https://github.com/CA0307-II-2025/grupo-3.git...
-Aug 21, 2025 11:02:35 AM reposense.report.RepoCloner spawnCloneProcess
-INFO: Cloning in parallel from https://github.com/CA0307-II-2025/grupo-2.git...
-Aug 21, 2025 11:02:35 AM reposense.report.RepoCloner spawnCloneProcess
+Aug 21, 2025 11:03:42 AM reposense.report.RepoCloner spawnCloneProcess
 INFO: Cloning in parallel from https://github.com/CA0307-II-2025/grupo-4.git...
-Aug 21, 2025 11:02:35 AM reposense.report.RepoCloner waitForCloneProcess
+Aug 21, 2025 11:03:42 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/CA0307-II-2025/grupo-3.git...
+Aug 21, 2025 11:03:42 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/CA0307-II-2025/grupo-2.git...
+Aug 21, 2025 11:03:42 AM reposense.report.RepoCloner spawnCloneProcess
+INFO: Cloning in parallel from https://github.com/CA0307-II-2025/grupo-1.git...
+Aug 21, 2025 11:03:42 AM reposense.report.RepoCloner waitForCloneProcess
 INFO: Waiting for cloning of https://github.com/CA0307-II-2025/grupo-3.git to complete...
-Aug 21, 2025 11:02:35 AM reposense.report.RepoCloner waitForCloneProcess
-INFO: Waiting for cloning of https://github.com/CA0307-II-2025/grupo-4.git to complete...
-Aug 21, 2025 11:02:35 AM reposense.report.RepoCloner waitForCloneProcess
-INFO: Waiting for cloning of https://github.com/CA0307-II-2025/grupo-2.git to complete...
-Aug 21, 2025 11:02:35 AM reposense.report.RepoCloner waitForCloneProcess
+Aug 21, 2025 11:03:42 AM reposense.report.RepoCloner waitForCloneProcess
 INFO: Waiting for cloning of https://github.com/CA0307-II-2025/grupo-1.git to complete...
-Aug 21, 2025 11:02:36 AM reposense.report.RepoCloner waitForCloneProcess
+Aug 21, 2025 11:03:42 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/CA0307-II-2025/grupo-2.git to complete...
+Aug 21, 2025 11:03:42 AM reposense.report.RepoCloner waitForCloneProcess
+INFO: Waiting for cloning of https://github.com/CA0307-II-2025/grupo-4.git to complete...
+Aug 21, 2025 11:03:42 AM reposense.report.RepoCloner waitForCloneProcess
 INFO: Cloning of https://github.com/CA0307-II-2025/grupo-1.git completed!
-Aug 21, 2025 11:02:36 AM reposense.report.ReportGenerator analyzeRepos
-INFO: [1/4] Analyzing https://github.com/CA0307-II-2025/grupo-1.git (main)...
-Aug 21, 2025 11:02:36 AM reposense.report.RepoCloner waitForCloneProcess
+Aug 21, 2025 11:03:42 AM reposense.report.RepoCloner waitForCloneProcess
 INFO: Cloning of https://github.com/CA0307-II-2025/grupo-4.git completed!
-Aug 21, 2025 11:02:36 AM reposense.report.ReportGenerator analyzeRepos
-INFO: [2/4] Analyzing https://github.com/CA0307-II-2025/grupo-4.git (main)...
-Aug 21, 2025 11:02:36 AM reposense.report.RepoCloner waitForCloneProcess
+Aug 21, 2025 11:03:42 AM reposense.report.RepoCloner waitForCloneProcess
 INFO: Cloning of https://github.com/CA0307-II-2025/grupo-2.git completed!
-Aug 21, 2025 11:02:36 AM reposense.report.ReportGenerator analyzeRepos
+Aug 21, 2025 11:03:42 AM reposense.report.ReportGenerator analyzeRepos
+INFO: [1/4] Analyzing https://github.com/CA0307-II-2025/grupo-1.git (main)...
+Aug 21, 2025 11:03:42 AM reposense.report.ReportGenerator analyzeRepos
+INFO: [2/4] Analyzing https://github.com/CA0307-II-2025/grupo-4.git (main)...
+Aug 21, 2025 11:03:42 AM reposense.report.ReportGenerator analyzeRepos
 INFO: [3/4] Analyzing https://github.com/CA0307-II-2025/grupo-2.git (main)...
-Aug 21, 2025 11:02:36 AM reposense.report.ReportGenerator updateRepoConfig
-INFO: https://github.com/CA0307-II-2025/grupo-1.git (main) does not contain a standalone config file.
-Aug 21, 2025 11:02:36 AM reposense.report.ReportGenerator updateRepoConfig
-INFO: https://github.com/CA0307-II-2025/grupo-4.git (main) does not contain a standalone config file.
-Aug 21, 2025 11:02:36 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
-INFO: Extracting relevant file info from https://github.com/CA0307-II-2025/grupo-1.git (main)...
-Aug 21, 2025 11:02:36 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
-INFO: Extracting relevant file info from https://github.com/CA0307-II-2025/grupo-4.git (main)...
-Aug 21, 2025 11:02:36 AM reposense.report.ReportGenerator updateRepoConfig
-INFO: https://github.com/CA0307-II-2025/grupo-2.git (main) does not contain a standalone config file.
-Aug 21, 2025 11:02:36 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
-INFO: Extracting relevant file info from https://github.com/CA0307-II-2025/grupo-2.git (main)...
-Aug 21, 2025 11:02:36 AM reposense.report.RepoCloner waitForCloneProcess
+Aug 21, 2025 11:03:42 AM reposense.report.RepoCloner waitForCloneProcess
 INFO: Cloning of https://github.com/CA0307-II-2025/grupo-3.git completed!
-Aug 21, 2025 11:02:36 AM reposense.report.ReportGenerator analyzeRepos
+Aug 21, 2025 11:03:42 AM reposense.report.ReportGenerator analyzeRepos
 INFO: [4/4] Analyzing https://github.com/CA0307-II-2025/grupo-3.git (main)...
-Aug 21, 2025 11:02:36 AM reposense.report.ReportGenerator updateRepoConfig
+Aug 21, 2025 11:03:42 AM reposense.report.ReportGenerator updateRepoConfig
+INFO: https://github.com/CA0307-II-2025/grupo-4.git (main) does not contain a standalone config file.
+Aug 21, 2025 11:03:42 AM reposense.report.ReportGenerator updateRepoConfig
+INFO: https://github.com/CA0307-II-2025/grupo-2.git (main) does not contain a standalone config file.
+Aug 21, 2025 11:03:42 AM reposense.report.ReportGenerator updateRepoConfig
+INFO: https://github.com/CA0307-II-2025/grupo-1.git (main) does not contain a standalone config file.
+Aug 21, 2025 11:03:42 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+INFO: Extracting relevant file info from https://github.com/CA0307-II-2025/grupo-1.git (main)...
+Aug 21, 2025 11:03:42 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+INFO: Extracting relevant file info from https://github.com/CA0307-II-2025/grupo-2.git (main)...
+Aug 21, 2025 11:03:42 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+INFO: Extracting relevant file info from https://github.com/CA0307-II-2025/grupo-4.git (main)...
+Aug 21, 2025 11:03:42 AM reposense.report.ReportGenerator updateRepoConfig
 INFO: https://github.com/CA0307-II-2025/grupo-3.git (main) does not contain a standalone config file.
-Aug 21, 2025 11:02:36 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
+Aug 21, 2025 11:03:42 AM reposense.authorship.FileInfoExtractor extractTextFileInfos
 INFO: Extracting relevant file info from https://github.com/CA0307-II-2025/grupo-3.git (main)...
-Aug 21, 2025 11:02:36 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+Aug 21, 2025 11:03:42 AM reposense.commits.CommitInfoExtractor extractCommitInfos
 INFO: Extracting commits info for https://github.com/CA0307-II-2025/grupo-1.git (main)...
-Aug 21, 2025 11:02:36 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+Aug 21, 2025 11:03:42 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
 INFO: Analyzing commits info for https://github.com/CA0307-II-2025/grupo-1.git (main)...
-Aug 21, 2025 11:02:36 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+Aug 21, 2025 11:03:42 AM reposense.commits.CommitInfoExtractor extractCommitInfos
 INFO: Extracting commits info for https://github.com/CA0307-II-2025/grupo-4.git (main)...
-Aug 21, 2025 11:02:36 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+Aug 21, 2025 11:03:43 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
 INFO: Analyzing commits info for https://github.com/CA0307-II-2025/grupo-4.git (main)...
-Aug 21, 2025 11:02:36 AM reposense.report.ReportGenerator analyzeRepo
+Aug 21, 2025 11:03:43 AM reposense.report.ReportGenerator analyzeRepo
 INFO: Analysis of https://github.com/CA0307-II-2025/grupo-4.git (main) completed!
-Aug 21, 2025 11:02:36 AM reposense.report.ReportGenerator analyzeRepo
+Aug 21, 2025 11:03:43 AM reposense.report.ReportGenerator analyzeRepo
 INFO: Analysis of https://github.com/CA0307-II-2025/grupo-1.git (main) completed!
-Aug 21, 2025 11:02:36 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+Aug 21, 2025 11:03:43 AM reposense.commits.CommitInfoExtractor extractCommitInfos
 INFO: Extracting commits info for https://github.com/CA0307-II-2025/grupo-2.git (main)...
-Aug 21, 2025 11:02:37 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+Aug 21, 2025 11:03:43 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
 INFO: Analyzing commits info for https://github.com/CA0307-II-2025/grupo-2.git (main)...
-Aug 21, 2025 11:02:37 AM reposense.commits.CommitInfoExtractor extractCommitInfos
+Aug 21, 2025 11:03:43 AM reposense.commits.CommitInfoExtractor extractCommitInfos
 INFO: Extracting commits info for https://github.com/CA0307-II-2025/grupo-3.git (main)...
-Aug 21, 2025 11:02:37 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
-INFO: Analyzing commits info for https://github.com/CA0307-II-2025/grupo-3.git (main)...
-Aug 21, 2025 11:02:37 AM reposense.report.ReportGenerator analyzeRepo
+Aug 21, 2025 11:03:43 AM reposense.report.ReportGenerator analyzeRepo
 INFO: Analysis of https://github.com/CA0307-II-2025/grupo-2.git (main) completed!
-Aug 21, 2025 11:02:37 AM reposense.report.ReportGenerator analyzeRepo
+Aug 21, 2025 11:03:43 AM reposense.commits.CommitInfoAnalyzer analyzeCommits
+INFO: Analyzing commits info for https://github.com/CA0307-II-2025/grupo-3.git (main)...
+Aug 21, 2025 11:03:43 AM reposense.report.ReportGenerator analyzeRepo
 INFO: Analysis of https://github.com/CA0307-II-2025/grupo-3.git (main) completed!
-Aug 21, 2025 11:02:37 AM reposense.report.ReportGenerator generateReposReport
+Aug 21, 2025 11:03:43 AM reposense.report.ReportGenerator generateReposReport
 INFO: The report is generated at /home/runner/work/tablero-de-participacion/tablero-de-participacion/reposense-report
-Aug 21, 2025 11:02:37 AM reposense.RepoSense main
-INFO: Elapsed processing time: 1.73 second(s)
+Aug 21, 2025 11:03:43 AM reposense.RepoSense main
+INFO: Elapsed processing time: 1.85 second(s)
