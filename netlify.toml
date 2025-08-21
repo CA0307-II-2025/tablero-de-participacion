@@ -9,4 +9,4 @@
   """
 
   publish = "./reposense-report"
-  base = "./" 
+  base = "./"
